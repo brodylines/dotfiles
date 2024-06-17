@@ -1,0 +1,197 @@
+{
+	"layer": "top",
+	"modules-left": [
+		"hyprland/workspaces",
+		"custom/spacer",
+		"custom/nwg-drawer",
+		"custom/term",
+		"custom/calculator",
+		"custom/filemanager",
+		"custom/fonts",
+		"custom/screenshot",
+		"idle_inhibitor",
+		"custom/lock",
+		"custom/spacer",
+		"custom/uname"
+	],
+	"modules-center": [
+		"wlr/taskbar"
+	],
+	"modules-right": [
+		"pulseaudio",
+		"custom/spacer",
+		"cpu",
+		"memory",
+		"disk",
+		"custom/spacer",
+		"custom/updates",
+		"custom/spacer",
+		"tray",
+		"custom/spacer",
+		"clock",
+		"custom/exit"
+	],
+	"hyprland/workspaces": {
+		"persistent-workspaces": {
+			"1": [],
+			"2": [],
+			"3": [],
+			"4": [],
+			"5": [],
+			"6": [],
+			"7": [],
+			"8": [],
+			"9": [],
+			"10": []
+		}
+	},
+	"pulseaudio": {
+		"tooltip": false,
+		"scroll-step": 2,
+		"on-click": "wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle",
+		"format": "{icon}   {volume}%",
+		"format-icons": {
+			"default": ["", ""]
+		},
+		"format-muted": ""
+	},
+	"network": {
+		"format-wifi": " {essid} {ipaddr}",
+		"format-ethernet": "  {ipaddr}",
+		"tooltip-format": "{ifname}: up {bandwidthUpBits}, down {bandwidthDownBits}"
+	},
+	"cpu": {
+		"tooltip": false,
+		"format": "  {usage}%"
+	},
+	"memory": {
+		"tooltip": false,
+		"format": "  {}%"
+	},
+	"disk": {
+		"interval": 30,
+		"format": "  {percentage_used}% ",
+		"path": "/",
+		"tooltip-format": "{free} remaining on {path}"
+	},
+	"idle_inhibitor": {
+		"format": "{icon}",
+		"format-icons": {
+			"activated": "",
+			"deactivated": ""
+		}
+	},
+	"tray": {
+        "icon-size": 24,
+        "spacing": 12
+    },
+	"wlr/taskbar": {
+    	"format": "{icon}",
+    	"icon-size": 24,
+    	"tooltip-format": "{name}",
+    	"on-click": "activate",
+    	"on-click-middle": "close",
+    	"ignore-list": [
+       		"Alacritty",
+			"cava"
+    	]
+	},
+	"mpd": {
+		"format": "{stateIcon}{consumeIcon}{randomIcon}{repeatIcon}{singleIcon} {artist} - {album} - {title} ({elapsedTime:%M:%S}/{totalTime:%M:%S}) ",
+		"format-disconnected": "Disconnected ",
+		"format-stopped": "{consumeIcon}{randomIcon}{repeatIcon}{singleIcon}Stopped ",
+		"interval": 2,
+		"consume-icons": {
+			"on": " "
+		},
+		"random-icons": {
+			"on": " "
+		},
+		"repeat-icons": {
+			"on": " "
+		},
+		"single-icons": {
+			"on": "1 "
+		},
+		"state-icons": {
+			"paused": "",
+			"playing": ""
+		},
+		"tooltip-format": "MPD (connected)",
+		"tooltip-format-disconnected": "MPD (disconnected)"
+	},
+	"custom/calculator": {
+		"format": "",
+		"on-click": "galculator",
+		"tooltip-format": "Calculator"
+	},
+	"custom/filemanager": {
+		"format": "",
+		"on-click": "pcmanfm --class floating",
+		"tooltip-format": "File Browser"
+	},
+	"custom/exit": {
+		"format": "",
+		"on-click": "/home/brody/bin/myreboot",
+		"tooltip": false
+	},
+	"custom/fonts": {
+		"format": "",
+		"on-click": "gucharmap",
+		"tooltip-format": "Character Map"
+	},
+	"custom/term": {
+		"format": "",
+		"on-click": "alacritty --class floating",
+		"tooltip-format": "Alacritty Terminal"
+	},
+	"custom/screenshot": {
+		"format": "",
+		"on-click": "hyprshot-gui",
+		"tooltip-format": "ScreenShot"
+	},
+	"custom/spacer": {
+		"format": "",
+		"tooltip": false
+	},
+	"custom/nwg-drawer": {
+		"format": "",
+		"on-click": "nwg-drawer -s dracula -mb 250 -ml 600 -mr 600 -mt 100",
+		"tooltip-format": "App Launcher"
+	},
+	"clock": {
+		"tooltip-format": "<tt><small>{calendar}</small></tt>",
+		"format": "{:%H:%M - %b %d}",
+		"format-alt": "{:%I:%M %p - %b %d}"
+	},
+	"custom/updates": {
+		"format": "{} {icon}",
+		"return-type": "json",
+		"format-icons": {
+			"has-updates": "",
+			"updated": ""
+		},
+		"exec-if": "which waybar-module-pacman-updates",
+		"exec": "waybar-module-pacman-updates",
+		"on-click": "pamac-manager --updates"
+	},
+   "custom/uname": {
+		"exec": "uname -srm | awk '{ print $2 }'"
+   },
+   "custom/lock": {
+		"format": "",
+		"on-click": "hyprlock"
+   },
+   "custom/vpn": {
+    	"format": "{icon}",
+		"format-icons": {
+        	"connected": "",
+        	"disconnected": ""
+    	},
+    	"exec": "/home/brody/.config/waybar/vpn-check",
+    	"return-type": "json",
+    	"interval": 5,
+		"on-click": "/home/brody/bin/vpn",
+		"tooltip": false
+	}
+}
