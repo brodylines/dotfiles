@@ -24,8 +24,6 @@
 		"memory",
 		"disk",
 		"custom/spacer",
-		"custom/updates",
-		"custom/spacer",
 		"tray",
 		"custom/spacer",
 		"clock",
@@ -88,7 +86,7 @@
 	"wlr/taskbar": {
     	"format": "{icon}",
     	"icon-size": 24,
-    	"tooltip-format": "{name}",
+    	"tooltip-format": "{title}",
     	"on-click": "activate",
     	"on-click-middle": "close",
     	"ignore-list": [
@@ -180,7 +178,7 @@
    },
    "custom/lock": {
 		"format": "",
-		"on-click": "hyprlock"
+		"on-click": "/home/brody/bin/mylock"
    },
    "custom/vpn": {
     	"format": "{icon}",
