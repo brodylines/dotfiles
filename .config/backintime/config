@@ -101,8 +101,8 @@ profile1.snapshots.ssh.prefix.enabled=false
 profile1.snapshots.ssh.prefix.value=PATH=/opt/bin:/opt/sbin:\$PATH
 profile1.snapshots.ssh.private_key_file=
 profile1.snapshots.ssh.proxy_host=
-profile1.snapshots.ssh.proxy_host_port=22
-profile1.snapshots.ssh.proxy_user=brody
+profile1.snapshots.ssh.proxy_host_port=
+profile1.snapshots.ssh.proxy_user=
 profile1.snapshots.ssh.user=brody
 profile1.snapshots.take_snapshot_regardless_of_changes=false
 profile1.snapshots.use_checksum=false
