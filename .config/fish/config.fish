@@ -5,10 +5,10 @@ end
 set fish_greeting
 
 alias ls='ls -GFh'
-alias myvm='ssh blines@10.55.99.77 -t "tmux attach -d"'
+alias myvm='ssh blines@10.46.16.33 -t "tmux attach -d"'
 alias lt='ls -latr'
 alias azogvnc='ssh -L 5901:127.0.0.1:5901 -C -N -l blines 10.55.99.77'
-alias azog='ssh 10.55.99.77'
+alias azog='ssh blines@10.46.16.33'
 alias olorin='ssh brody@olorin.thelinescompany.com'
 alias cirdan='ssh brody@cirdan.thelinescompany.com'
 #alias myfetch='myclear; echo -e "\n"; fastfetch'
