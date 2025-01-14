@@ -91,7 +91,8 @@
     	"on-click-middle": "close",
     	"ignore-list": [
        		"Alacritty",
-			"cava"
+			"cava",
+			"com.mitchellh.ghostty"
     	]
 	},
 	"mpd": {
