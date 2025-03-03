@@ -3,7 +3,7 @@
 SETUVAR --export EDITOR:/usr/bin/vim
 SETUVAR --export MOZ_ENABLE_WAYLAND:1
 SETUVAR MY_ABBR_SET:true
-SETUVAR __fish_initialized:3400
+SETUVAR __fish_initialized:3800
 SETUVAR _fish_abbr_dback_2D_login1:ssh\x20blines\x40dback\x2dlogin1\x2etgen\x2eorg
 SETUVAR _fish_abbr_dback_2D_login2:ssh\x20blines\x40dback\x2dlogin2\x2etgen\x2eorg
 SETUVAR _fish_abbr_dback_2D_mgt1:ssh\x20blines\x40dback\x2dmgt1\x2etgen\x2eorg

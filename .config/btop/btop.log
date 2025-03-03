@@ -1272,3 +1272,6 @@ Use --utf-force argument to force start if you're sure your terminal can handle 
 
 2025/02/26 (14:09:29) | ===> btop++ v.1.2.13
 2025/02/26 (14:09:29) | WARNING: No good candidate for cpu sensor found, using random from all found sensors.
+
+2025/03/03 (11:13:19) | ===> btop++ v.1.2.13
+2025/03/03 (11:13:19) | WARNING: No good candidate for cpu sensor found, using random from all found sensors.
